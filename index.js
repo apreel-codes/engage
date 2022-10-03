@@ -31,24 +31,18 @@ mongoose.connect(dbUrl, {
     useUnifiedTopology: true,
 });
 
-// mongoose.connect('mongodb://localhost:27017/engage', { useNewUrlParser: true, useUnifiedTopology: true })
-//     .then(() => {
-//         console.log("Mongo Connection Open!!")
-//     })
-//     .catch(err => {
-//         console.log('Mongo Connection Error!')
-//         console.log(err)
-//      })
-
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", () => {
     console.log("Database connected")
 });
- 
 
-app.use(express.static(path.join(__dirname, 'assets')));
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.engine('ejs', ejsMate);
+ 
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -59,10 +53,6 @@ app.use(mongoSanitize({
     replaceWith: '_'
 })); 
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-app.engine('ejs', ejsMate);
 
 const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
 
