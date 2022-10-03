@@ -13,7 +13,7 @@ const storage = new CloudinaryStorage({
         folder: 'YelpCamp', //folder where cloudinary things should be stored in
         allowedFormats: ['jpegs', 'png', 'jpg'],
         width: 200,
-        height: 300
+        // height: 300
     }
 });
 
