@@ -17,7 +17,7 @@ const helmet = require('helmet');
 
 const User = require('./models/user');
 
-const dbUrl = 'mongodb://localhost:27017/engage';
+const dbUrl = 'mongodb://127.0.0.1:27017/engage';
 
 const userRoutes = require('./routes/users');
 const postRoutes = require('./routes/posts');
