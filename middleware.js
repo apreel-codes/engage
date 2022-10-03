@@ -1,4 +1,4 @@
-const { postSchema, commentSchema, replySchema } = require('./JoiValidator.js');
+const { postSchema, commentSchema, replySchema } = require('./joiValidator.js');
 const ExpressError = require('./utils/ExpressError');
 const Post = require('./models/post');
 const Comment = require('./models/comment');
