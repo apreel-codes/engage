@@ -36,11 +36,7 @@
                             <img src="<%=post.user.profile.url%>" alt="">
                             <h4><a href="#"><%=post.user.firstname%> <%=post.user.lastname%></a></h4>
                         </div>
-                        <% if(post.content.length > 300){ %> 
-                            <p class="content"><a href="/posts/<%=post._id%>"><%=post.content.substring(0, 300)%></a><b style="font-weight: bold; font-size: 0.8rem;"> ...more</b></p>
-                        <% } else { %>
                             <p class="content"><a href="/posts/<%=post._id%>"><%=post.content%></a></p>
-                        <% } %>
                         <div>
                             <div id="postCarousel" class="carousel slide" data-bs-ride="carousel">
       
