@@ -17,7 +17,7 @@ const helmet = require('helmet');
 
 const User = require('./models/user');
 
-const dbUrl = 'mongodb://127.0.0.1:27017/engage';
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/engage';
 
 const userRoutes = require('./routes/users');
 const postRoutes = require('./routes/posts');
@@ -31,15 +31,22 @@ mongoose.connect(dbUrl, {
     useUnifiedTopology: true,
 });
 
-mongoose.connect('mongodb://127.0.0.1:27017/engage', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log("Mongo Connection Open!!")
-    })
-    .catch(err => {
-        console.log('Mongo Connection Error!')
-        console.log(err)
-     })
+// mongoose.connect('mongodb://localhost:27017/engage', { useNewUrlParser: true, useUnifiedTopology: true })
+//     .then(() => {
+//         console.log("Mongo Connection Open!!")
+//     })
+//     .catch(err => {
+//         console.log('Mongo Connection Error!')
+//         console.log(err)
+//      })
 
+
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", () => {
+    console.log("Database connected")
+});
+ 
 
 app.use(express.static(path.join(__dirname, 'assets')));
 
