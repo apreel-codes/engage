@@ -1,0 +1,11 @@
+<% layout('layouts/boilerplate') %>
+    <link rel="stylesheet" href="/stylesheets/edit.css"> 
+
+    <div class="edit-modal">
+        <form action="/posts/<%=post._id%>/comments/<%=comment._id%>/replies/<%=reply._id%>?_method=PUT" method="POST">
+            <textarea rows="10" cols="30" type="text" name="reply[body]" id="reply" required><%=reply.body%></textarea>
+            <!-- <input type="text" name="reply[body]" id="reply" value="<%=reply.body%>" required> -->
+            <button class="update">Update reply</button>
+        </form>
+        <button class="cancel"><a href="/posts/<%=post._id%>">Cancel</a></button>
+    </div>

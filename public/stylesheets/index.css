@@ -1,0 +1,411 @@
+body{
+    background-color: hsl(0, 0%, 98%);
+    margin: 0px;
+    /* display: flex;
+    justify-content: center; */
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1;
+    color: hsl(0, 0%, 8%);
+    font-weight:lighter;
+    font-family: Epilogue;
+    font-size: 0.9rem;
+    position: relative;
+    max-width: 100%;
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(22, 22, 22);
+}
+
+@media(min-width: 320px) and (max-width: 480px){
+    #navbar{
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(57, 57, 243);
+        padding: 0.8rem 0.8rem;
+        align-items: center;
+    }
+
+    .logo span{
+        font-size: 1.5rem;
+        font-weight: bolder;
+        font-family: roboto;
+        color: aliceblue;
+    }
+
+    
+    .nav-links{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .desktop-nav{
+        display: none;
+    }
+
+   .new-post{
+        margin: 1.2rem 0.8rem 0;
+    }
+
+    .text-area{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .text-area img{
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+    }
+
+    label{
+        width: 2.3rem;
+        height: 2.3rem;
+        position: relative;
+        border-radius: 50%; 
+        margin-right: -0.6rem;
+    }
+
+    label svg{
+        height: 80%;
+        width: 80%;
+        position: absolute;
+        top: 0.5rem;
+    }
+
+    label span{
+       display: none;
+    }
+
+    .image-upload input{
+        display: none;
+    }
+
+    .text-area input{
+        width: 70%;
+        padding: 0.7rem 0.9rem;
+        border: 1px solid rgb(172, 172, 172);
+        outline: none;
+        border-radius: 10rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+ 
+    input::placeholder{
+        color: hsl(0, 0%, 79%);
+        font-weight: lighter;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    button{
+        width: 100%;
+        padding: 0.7rem 0;
+        font-size: 1rem;
+        border-radius: 10rem;
+        border: none;
+        background-color: rgb(57, 57, 243);
+        color: aliceblue;
+        margin-top: 1.2rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .post{
+        margin: 1.3rem 0.8rem 0;
+        box-shadow: 2px 2px 6px rgb(221, 221, 221);
+        border-radius: 0.3rem;
+        padding: 0.8rem 0.9rem 0.5rem;
+    }
+
+    .post .user-profile{
+        display: flex;
+        align-items: flex-start;
+        height: 1.7rem;
+    }
+
+    .post .user-profile img{
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+    }
+
+    .post h4{
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin: 0.3rem 0 0 0.5rem;
+    }
+
+    #postCarousel img{
+        width: 100%;
+        height: 13rem;
+        margin-bottom: 2rem;
+        object-fit: fill;
+    }
+
+
+    .post .content{
+        margin: 0.7rem 0 1.3rem;
+        line-height: 1.2rem;
+        text-align: justify;
+        font-size: 1rem;
+        border-top: 1px solid rgb(221, 221, 221);
+        padding-top: 0.7rem;
+        font-family: 'Calibri';
+    }
+
+    .post-bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Calibri';
+        font-size: 1rem;
+    }
+
+    .post-bottom p{
+        margin-top: 1rem;
+    }
+
+    .post-bottom p a{
+        color: black;
+    }
+
+    .post-bottom a{
+        color: rgb(57, 57, 243);
+        font-family: 'Calibri';
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .mobile-hidden{
+        display: none;
+    }
+
+    .mobile{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        min-height: 30vh;
+        box-shadow: 1px 2px 6px rgb(221, 221, 221);
+    }
+
+    .mobile .navs{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 50%;
+        height: 50%;
+        margin: 1.8rem auto 0;
+    }
+
+    .mobile .navs a{
+        padding: 0.6rem 0.8rem;
+        border: 1px blue solid;
+        border-radius: 0.2rem;
+        margin-bottom: 2.1rem;
+        background-color: rgb(57, 57, 243);
+        color: white;
+        font-size: 1rem;
+        font-family: 'Calibri';
+    }
+
+}
+
+/* @media(min-width: 481px) and (max-width: 640px){
+    #navbar{
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(57, 57, 243);
+        padding: 0.8rem 0.8rem;
+        align-items: center;
+    }
+
+    .logo span{
+        font-size: 1.5rem;
+        font-weight: bolder;
+        font-family: roboto;
+        color: aliceblue;
+    }
+
+    
+    .nav-links{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .desktop-nav{
+        display: none;
+    }
+
+   .new-post{
+        margin: 1.2rem 0.8rem 0;
+    }
+
+    .text-area{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .text-area img{
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+    }
+
+    label{
+        width: 2.3rem;
+        height: 2.3rem;
+        position: relative;
+        border-radius: 50%; 
+        margin-right: -0.6rem;
+    }
+
+    label svg{
+        height: 80%;
+        width: 80%;
+        position: absolute;
+        top: 0.5rem;
+    }
+
+    label span{
+       display: none;
+    }
+
+    .image-upload input{
+        display: none;
+    }
+
+    .text-area input{
+        width: 70%;
+        padding: 0.7rem 0.9rem;
+        border: 1px solid rgb(172, 172, 172);
+        outline: none;
+        border-radius: 10rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+ 
+    input::placeholder{
+        color: hsl(0, 0%, 79%);
+        font-weight: lighter;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    button{
+        width: 100%;
+        padding: 0.7rem 0;
+        font-size: 1rem;
+        border-radius: 10rem;
+        border: none;
+        background-color: rgb(57, 57, 243);
+        color: aliceblue;
+        margin-top: 1.2rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .post{
+        margin: 1.3rem 0.8rem 0;
+        box-shadow: 2px 2px 6px rgb(221, 221, 221);
+        border-radius: 0.3rem;
+        padding: 0.8rem 0.9rem 0.5rem;
+    }
+
+    .post .user-profile{
+        display: flex;
+        align-items: flex-start;
+        height: 1.7rem;
+    }
+
+    .post .user-profile img{
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+    }
+
+    .post h4{
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin: 0.3rem 0 0 0.5rem;
+    }
+
+    #postCarousel img{
+        width: 100%;
+        height: 13rem;
+        margin-bottom: 2rem;
+        object-fit: fill;
+    }
+
+
+    .post .content{
+        margin: 0.7rem 0 1.3rem;
+        line-height: 1.2rem;
+        text-align: justify;
+        font-size: 1rem;
+        border-top: 1px solid rgb(221, 221, 221);
+        padding-top: 0.7rem;
+        font-family: 'Calibri';
+    }
+
+    .post-bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Calibri';
+        font-size: 1rem;
+    }
+
+    .post-bottom p{
+        margin-top: 1rem;
+    }
+
+    .post-bottom p a{
+        color: black;
+    }
+
+    .post-bottom a{
+        color: rgb(57, 57, 243);
+        font-family: 'Calibri';
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .mobile-hidden{
+        display: none;
+    }
+
+    .mobile{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        min-height: 30vh;
+        box-shadow: 1px 2px 6px rgb(221, 221, 221);
+    }
+
+    .mobile .navs{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 50%;
+        height: 50%;
+        margin: 1.8rem auto 0;
+    }
+
+    .mobile .navs a{
+        padding: 0.6rem 0.8rem;
+        border: 1px blue solid;
+        border-radius: 0.2rem;
+        margin-bottom: 2.1rem;
+        background-color: rgb(57, 57, 243);
+        color: white;
+        font-size: 1rem;
+        font-family: 'Calibri';
+    } */
+
+
+
+

@@ -1,0 +1,312 @@
+body{
+    background-color: hsl(0, 0%, 98%);
+    margin: 0px;
+    min-height: 100vh;
+    line-height: 1;
+    color: hsl(0, 0%, 8%);
+    font-weight:lighter;
+    font-family: 'Epilogue';
+    font-size: 0.9rem;
+    position: relative;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(22, 22, 22);
+}
+
+@media(min-width: 320px) and (max-width: 480px){
+    #navbar{
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(57, 57, 243);
+        padding: 0.8rem 0.8rem;
+        align-items: center;
+    }
+
+    .logo span{
+        font-size: 1.5rem;
+        font-weight: bolder;
+        font-family: roboto;
+        color: aliceblue;
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .desktop-nav{
+        display: none;
+    }
+
+    .add-comment{
+        position: fixed;
+        bottom: 0;
+        margin: 0 auto;
+        width: 100%;
+        padding: 1rem 1rem;
+        box-shadow: 1px -2px 6px rgb(221, 221, 221);
+        background-color: white;
+    }
+
+    .add-comment input{
+        width: 70%;
+        padding: 0.45rem 0.9rem;
+        border: 1px solid rgb(172, 172, 172);
+        outline: none;
+        border-radius: 10rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+ 
+    input::placeholder{
+        color: hsl(0, 0%, 79%);
+        font-weight: lighter;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .add-comment button{
+        width: 28.7%;
+        padding: 0.7rem 0;
+        font-size: 0.8rem;
+        border-radius: 10rem;
+        border: none;
+        background-color: rgb(57, 57, 243);
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #show-body{
+        padding: 0 1rem;
+        padding-bottom: 3rem;
+        /* margin-bottom: 5rem; */
+    }
+
+    .edit-delete{
+        position: absolute;
+        background-color: white;
+        top: 0;
+        right: 1.5rem;
+        text-align: center;
+        padding: 0.9rem 0.5rem;
+        border-radius: 0.2rem;
+        font-size: 0.9rem;
+        font-family: 'Calibri';
+        box-shadow: 1px -2px 6px rgb(221, 221, 221);
+    }
+
+    .edit-delete a{
+        color: black;
+        font-weight: bold;
+    }
+
+
+    .edit-delete-hidden{
+        display: none;
+    }
+
+    .edit-delete button{
+        border: none;
+        outline: 0;
+        background-color: white;
+        margin-top: 0.7rem;
+        color: red;
+        font-weight: bold;
+    }
+
+    .post-top{
+        /* border: 1px red solid; */
+        display: flex;
+        justify-content: space-between;
+        margin: 1.5rem 0;
+        position: relative;
+    }
+
+    .user-profile{
+        display: flex;
+        height: 1.7rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .post-top .user-profile img{
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        margin-top: 0.4rem;
+    }
+
+    .post-top .user-profile h4{
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-left: 0.6rem;
+    }
+
+    .post img{
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    #postCarousel img{
+        width: 100%;
+        height: 250px;
+        margin-bottom: 1rem;
+        /* object-fit: cover; */
+    }
+
+    .post p{
+        /* margin: 0.5rem 0 1.3rem; */
+        line-height: 1.2rem;
+        text-align: justify;
+        font-size: 1rem;
+        border-top: 1px solid rgb(221, 221, 221);
+        padding-top: 0.7rem;
+        font-family: 'Calibri';
+    }
+
+    .three-dots{
+        /* border: 1px red solid; */
+        width: 6%;
+        height: 0.8rem;
+        /* margin-right: 0.5rem; */
+    }
+
+    .comment{
+        font-family: 'Calibri';
+        margin-bottom: 1rem;
+        padding: 1rem 0;
+    }
+
+    .comment-header{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    #each-comment{
+        border: 1px rgb(221, 221, 221) solid;
+        border-radius: 0.3rem;
+        border-top-right-radius: 0;
+        padding: 0.5rem 0.7rem 0.7rem;
+    }
+
+    #each-comment h4{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    #each-comment .edit-delete-reply{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 1rem;
+        font-weight: bold;
+        color: rgb(57, 57, 243);
+    }
+
+    #each-comment .edit-delete-reply .reply-count{
+        color: black;
+        font-weight: lighter;
+    }
+
+    .edit-delete-reply .count-reply{
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .edit-delete-reply .edit-delete-comment{
+        display: flex;
+        justify-content: space-between;
+        width: 80px;
+    }
+
+
+    .edit-delete-reply a{
+        color: rgb(57, 57, 243);
+    }
+
+    .edit-delete-reply button{
+        border: none;
+        outline: none;
+        background-color: hsl(0, 0%, 98%);
+        padding: 0 0;
+        color: red;
+        font-weight: bold;
+    }
+
+    .reply-input{
+        margin-top: 1rem;
+        /* margin-right: 0.5rem; */
+    }
+
+    /* .reply-input-hidden{
+        display: none;
+    } */
+
+    .reply-input input{
+        width: 70%;
+        padding: 0.45rem 0.9rem;
+        border: 1px solid rgb(172, 172, 172);
+        outline: none;
+        border-radius: 10rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+ 
+    .reply-input input::placeholder{
+        color: hsl(0, 0%, 79%);
+        font-weight: lighter;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .reply-input button{
+        width: 28.7%;
+        padding: 0.7rem 0;
+        font-size: 0.8rem;
+        border-radius: 10rem;
+        border: none;
+        background-color: rgb(57, 57, 243);
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .each-reply{
+        border: 1px rgb(221, 221, 221) solid;
+        padding: 0.5rem 0 0.5rem 0.7rem;
+    }
+
+    #replies{
+        width: 80%;
+        margin-left: auto;
+    }
+
+    .each-reply .edit-and-delete{
+        width: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 1rem;
+        font-weight: bold;
+    }
+
+    .edit-and-delete a{
+        color: rgb(57, 57, 243);;
+    }
+
+    .edit-and-delete button{
+        border: none;
+        outline: none;
+        background-color: hsl(0, 0%, 98%);
+        padding: 0 0;
+        color: red;
+        font-weight: bold;
+    }
+
+    .each-reply h4{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+
+}

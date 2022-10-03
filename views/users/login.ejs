@@ -1,0 +1,34 @@
+<% layout('layouts/boilerplate') %>
+<link rel="stylesheet" href="/stylesheets/login.css">
+
+<div id="login-body">
+    <h1>Login</h1>
+    <form action="/login" method="POST">
+        <input id="email" class="form-control" type="email" name="email" id="email" placeholder="Email Address">
+        <input id="password" class="form-control" type="password" name="password" id="password"  placeholder="Password">
+            <div class="check-group">
+                <input type="checkbox" class="show-password" style="height: 0.5rem;">
+                <label for=""> Show Password</label>
+            </div>
+        <button>Login</button>
+    </form>
+    <p>Don't have an account? <a href="/register">Register</a></p>
+</div>
+
+
+<script>
+    const check = document.querySelector('.show-password');
+    const hide = document.querySelector('.fa-eye-slash');
+    const show = document.querySelector('.fa-eye');
+
+
+    check.addEventListener('click', () => {
+        var x = document.querySelector('#password');
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        })
+        
+</script>

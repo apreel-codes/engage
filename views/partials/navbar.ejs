@@ -1,0 +1,22 @@
+
+<div id="navbar">
+  <div class="logo">
+     <span><a href="/posts" style="color: aliceblue; text-decoration: none;">engage</a></span>
+  </div>
+
+  <div class="nav-links">
+    <div class="desktop-nav">
+        <% if(!currentUser) { %> 
+          <a href="/login">Login</a>
+          <a href="/register">Register</a>
+        <% } else { %>
+          <a href="/"><%=currentUser.username%></a>
+          <a href="/logout">Logout</a>
+        <% } %> 
+    </div>
+    <div class="ham">
+          <svg width="25" height="20" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z"/></g></svg>
+    </div>
+      <!-- <img class="ham" src="/images/icon-hamburger.svg" alt=""> -->
+  </div>
+</div>

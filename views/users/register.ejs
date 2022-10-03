@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate') %>
+<link rel="stylesheet" href="/stylesheets/register.css">
+
+
+<div id="register-body">
+    <h1>Register</h1>
+    <form action="/register" method="POST" enctype="multipart/form-data">
+        <input class="form-control" type="text" name="firstname" id="firstname" placeholder="First name">
+
+        <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Last name">
+
+        <input class="form-control" type="text" name="username" id="username" placeholder="Username">
+
+        <input class="form-control" type="email" name="email" id="email" placeholder="Email address">
+
+        <input class="form-control" type="password" name="password" id="password" placeholder="Password">
+
+        <label for="profile" class="form-label">Add profile photo</label><br><br>
+        <input class="form-control" name="profile" type="file" id="profile">
+        
+        <button>Register</button>
+    </form>
+    <p>Already have an account? <a href="/login">Login</a></p>
+</div>
+    
