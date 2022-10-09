@@ -141,6 +141,7 @@ a:hover, a:active, a:visited, a:focus {
         height: 30px;
         width: 30px;
         margin-top: 1rem;
+        object-fit: cover;
     }
 
     .post-top .user-profile h4{
@@ -175,6 +176,7 @@ a:hover, a:active, a:visited, a:focus {
         height: 200px;
         margin-bottom: 2rem;
         object-fit: cover;
+        border: 1px solid rgba(173, 173, 173, 0.925);
     }
 
     .post p{
