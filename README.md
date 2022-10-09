@@ -8,6 +8,8 @@ engage is still a work in progress and i look to adding more functionalities int
 
 engage uses Cloudinary to save photos in cloud and also heroku is the hosting platform.
 
+This app is only available on the mobile platform now but this file will be updated as soon as the other screen sizes are available for it.
+
 This link directs you to the app: https://apreel-engage-app.herokuapp.com/posts
 
 
