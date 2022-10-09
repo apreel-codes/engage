@@ -8,4 +8,6 @@ engage is still a work in progress and i look to adding more functionalities int
 
 engage uses Cloudinary to save photos in cloud and also heroku is the hosting platform.
 
-This link directs you to the app apreel-engage-app.herokuapp.com/posts
+This link directs you to the app: apreel-engage-app.herokuapp.com/posts
+
+
