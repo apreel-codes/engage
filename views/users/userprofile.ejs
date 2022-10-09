@@ -1,0 +1,65 @@
+<% layout('layouts/boilerplate') %>
+<link rel="stylesheet" href="/stylesheets/userprofile.css">
+
+<div class="user-info">
+    <img src="<%=user.profile.url%>" alt="">
+    <h4><%=user.firstname%> <%=user.lastname%></h4>
+    <p><span>Username</span> - <%=user.username%></p>
+</div>
+
+
+<div>
+    <% if(user.posts.length !== 0) { %> 
+        <% for(let post of user.posts.reverse()) { %> 
+            <div class="post">
+                <div class="user-profile">
+                    <img src="<%=user.profile.url%>" alt="">
+                    <div class="name-date">
+                        <h4><%=user.firstname%> <%=user.lastname%></h4>
+                        <div class="date-time">
+                            <span class="date">Posted on <%=post.postedAt.toString().substring(4, 15)%> at</span>
+                            <span class="time"><%=post.postedAt.toString().substring(16, 21)%></span>    
+                        </div>
+                    </div>   
+                </div>
+                <p class="content"><a href="/posts/<%=post._id%>"><%=post.content%></a></p>
+                <div>
+                    <div id="postCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class="carousel-inner">
+                        <% post.images.forEach((image, i) => { %>
+                            <!-- if index of image is 0,1,2 etc add active, otherwise add nothing -->
+                        <div class="carousel-item <%=i === 0 ? 'active' : '' %>">
+                            <img src="<%=image.url%>" alt="">
+                        </div>
+                        <% }) %> 
+                        </div>
+                        
+                        <!-- if length of images array is greater than 1, add the carousel control -->
+                        <%  if(post.images.length > 1) { %> 
+                        <button class="carousel-control-prev" type="button" data-bs-target="#postCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#postCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+                        <% } %> 
+                    </div>
+                </div>
+                <div class="post-bottom">
+                    <% if(post.comments.length !== 1) { %> 
+                        <p><a href="/posts/<%=post._id%>"><%=post.comments.length%> comments</a></p>
+                    <% } else { %> 
+                        <p><a href="/posts/<%=post._id%>"><%=post.comments.length%> comment</a></p>
+                    <% } %> 
+                    <a href="/posts/<%=post._id%>">Add Comment</a>
+                </div>
+        </div>
+        <% } %> 
+    <% } else { %>
+        <p class="no-post"><i>No posts available</i></p>
+    <% } %> 
+</div>
+

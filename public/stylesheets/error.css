@@ -14,6 +14,10 @@ body{
     color: rgba(255, 255, 255, 0.89);
 }
 
+a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
+}
+
 
 @media(min-width: 320px) and (max-width: 480px){
     .notfound-error h1{

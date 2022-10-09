@@ -34,7 +34,18 @@
                     <div class="post">
                         <div class="user-profile">
                             <img src="<%=post.user.profile.url%>" alt="">
-                            <h4><a href="#"><%=post.user.firstname%> <%=post.user.lastname%></a></h4>
+                            <div class="name-date">
+                                <% if( currentUser && post.user.equals(currentUser._id)) { %>
+                                <h4><a href="/profile"><%=post.user.firstname%> <%=post.user.lastname%></a></h4>
+                                <% } else { %> 
+                                <h4><a href="/profile/<%=post.user._id%> "><%=post.user.firstname%> <%=post.user.lastname%></a></h4>
+                                <% } %> 
+                                <div class="date-time">
+                                    <span class="date">Posted on <%=post.postedAt.toString().substring(4, 15)%> at</span>
+                                    <span class="time"><%=post.postedAt.toString().substring(16, 21)%></span>    
+                                </div>
+                            </div>
+        
                         </div>
                             <p class="content"><a href="/posts/<%=post._id%>"><%=post.content%></a></p>
                         <div>
@@ -44,7 +55,7 @@
                                   <% post.images.forEach((image, i) => { %>
                                     <!-- if index of image is 0,1,2 etc add active, otherwise add nothing -->
                                   <div class="carousel-item <%=i === 0 ? 'active' : '' %>">
-                                    <img src="<%=image.url%>" class="d-block w-100" alt="">
+                                    <img src="<%=image.url%>" alt="">
                                   </div>
                                   <% }) %> 
                                 </div>
@@ -92,7 +103,7 @@
                   <a href="/login">Login</a>
                   <a href="/register">Register</a>
                 <% } else { %>
-                  <a href="#">My Profile</a>
+                  <a href="/profile">My Profile</a>
                   <a href="/logout">Logout</a>
                 <% } %> 
         </div>

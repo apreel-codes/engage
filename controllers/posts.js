@@ -13,10 +13,14 @@ module.exports.index = async(req, res, next) => {
 
 //new post created gets submitted here
 module.exports.createNewPost = async(req, res, next) => {
+    const { id } = req.user;
+    const user = await User.findById(id);
     const newPost = new Post(req.body);
     newPost.user = req.user;
     newPost.images = req.files.map(f => ({ url: f.path, filename: f.filename }));
+    user.posts.push(newPost);
     await newPost.save();
+    await user.save();
     res.redirect('/posts')
 }
 

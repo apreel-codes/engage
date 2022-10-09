@@ -10,12 +10,10 @@
 <body>
     <div class="notfound-error">
             <h1><%=err.statusCode%></h1>
-            <h2><%=err.message%></h2>
             <% if(process.env.NODE_ENV !== "production") { %> 
             <!-- hide the error stack message from the user -->
             <p><%=err.stack%></p>
             <% } %> 
-            <p>It looks like you're lost :(</p>
             <a href="/posts">Go to homepage</a>
     </div>   
 </body>

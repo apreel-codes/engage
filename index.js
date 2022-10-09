@@ -11,6 +11,7 @@ const flash = require('connect-flash');
 const ExpressError = require('./utils/ExpressError');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
+const GoogleStrategy = require('passport-google-oauth2').Strategy;
 const MongoStore = require('connect-mongo')(session);
 
 const helmet = require('helmet');
@@ -90,6 +91,7 @@ passport.use(new LocalStrategy({
     usernameField: 'email',
     passwordField: 'password'
 }, User.authenticate()));
+
 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());

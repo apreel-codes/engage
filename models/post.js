@@ -26,8 +26,12 @@ const postSchema = new Schema({
     user: { 
         type: Schema.Types.ObjectId,
         ref: 'User'
-    }
-});
+    },
+    postedAt: { 
+        type: Date, 
+        default: Date.now 
+    },
+}, { timestamps: true } );
 
 postSchema.post('findOneAndDelete', async function(post){
     //if post was found and deleted

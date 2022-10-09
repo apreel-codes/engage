@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const Post = require('../models/post');
 
 
 
@@ -11,7 +12,7 @@ module.exports.renderRegisterForm = (req, res) => {
 module.exports.createNewUser =  async(req, res, next) => {
     try{
         const { firstname, lastname, username, email, password } = req.body;
-        const user = new User({firstname, lastname, username, email });
+        const user = new User({ firstname, lastname, username, email });
         user.profile.url = req.file.path;
         user.profile.filename = req.file.filename;
         const registeredUser = await User.register(user, password);
@@ -20,10 +21,54 @@ module.exports.createNewUser =  async(req, res, next) => {
           res.redirect('/posts');
     })
     } catch (e) {
-        // req.flash('error', e.message);
-        req.flash('error', 'Username/email already exists.');
+        req.flash('error', e.message);
         res.redirect('/register');
     }
+}
+
+
+
+//show user profile
+module.exports.showMyProfile = async(req, res) => {
+    const { id } =  req.user;
+    const user = await User.findById(id)
+    .populate(
+        {
+            path: 'posts',
+            populate: ( { path: 'images'} )
+        }
+    );
+    res.render('users/profile', { user })
+}
+
+//show other user profile 
+module.exports.showUserProfile = async(req, res) => {
+    const { id } =  req.params;
+    const user = await User.findById(id)
+    .populate(
+        {
+            path: 'posts',
+            populate: ( { path: 'images'} )
+        }
+    );
+    res.render('users/userprofile', { user })
+}
+
+//edit profile
+module.exports.renderEditProfile = async(req, res, next) => {
+    const { id } =  req.user;
+    const user = await User.findById(id);
+    // console.log(user);
+    res.render('users/edit', { user } );
+}
+
+//submit edited profile
+module.exports.updatedProfile = async(req, res, next) => {
+    const { id } =  req.params;
+    const user = await User.findByIdAndUpdate(id, { ...req.body.user } );
+    await user.save();
+    req.flash('success', 'Profile updated');
+    res.redirect('/profile');
 }
 
 
@@ -31,6 +76,8 @@ module.exports.createNewUser =  async(req, res, next) => {
 module.exports.renderLoginForm = (req, res) => {
     res.render('users/login')
 }
+
+    // res.send("Authenticate with google")
 
 module.exports.logIn = (req, res) => {
     const returnTo = req.session.returnTo;

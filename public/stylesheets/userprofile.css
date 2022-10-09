@@ -1,0 +1,201 @@
+body{
+    background-color: hsl(0, 0%, 98%);
+    margin: 0px;
+    min-height: 100vh;
+    line-height: 1;
+    color: hsl(0, 0%, 8%);
+    font-weight:lighter;
+    font-family: 'Calibri';
+    font-size: 0.9rem;
+    position: relative;
+    max-width: 100%;
+}
+
+a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
+}
+
+@media(min-width: 320px) and (max-width: 480px){
+    #navbar{
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(57, 57, 243);
+        padding: 0.8rem 0.8rem;
+        align-items: center;
+    }
+
+    .logo span{
+        font-size: 1.5rem;
+        font-weight: bolder;
+        font-family: roboto;
+        color: aliceblue;
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .desktop-nav{
+        display: none;
+    }
+
+    .user-info{
+        text-align: center;
+    }
+
+    .user-info span{
+        color: rgba(153, 153, 153, 0.945);
+    }
+
+    .user-info img{
+        border-radius: 50%;
+        height: 130px;
+        width: 130px;
+        margin: 1.5rem 0;
+    }
+
+    .user-info p{
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+
+    .edit-change-photo{
+        margin-bottom: 1rem;
+    }
+
+    .edit-change-photo a{
+        background-color: rgb(57, 57, 243);
+        color: white;
+        text-decoration: none;
+        padding: 0.8rem 3.2rem;
+        border-radius: 0.3rem;
+        font-size: 1rem;
+    }
+
+    label{
+        width: 2.3rem;
+        height: 2.3rem;
+        position: relative;
+        border-radius: 50%; 
+    }
+
+    label svg{
+        height: 80%;
+        width: 80%;
+        position: absolute;
+        top: 0.5rem;
+        right: 0.2rem;
+    }
+
+    .image-upload{
+        background-color: rgb(57, 57, 243);
+        display: flex;
+        justify-content: space-between;
+        width: 173px;
+        margin: 1.5rem auto 0;
+        align-items: center;
+        padding: 0 1rem;
+        border-radius: 0.3rem;
+    }
+    .image-upload span{
+        color: white;
+        font-size: 1rem;
+    }
+
+    .image-upload input{
+        display: none;
+    }
+
+    .post{
+        margin: 1.3rem 0.8rem 0;
+        box-shadow: 2px 2px 6px rgb(221, 221, 221);
+        border-radius: 0.3rem;
+        padding: 0.8rem 0.9rem 0.5rem;
+        font-family: 'Calibri';
+    }
+
+    .post .user-profile{
+        display: flex;
+    }
+
+
+    .post .user-profile img{
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+    }
+
+    .post h4{
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .post .name-date{
+        margin-left: 0.4rem;
+    }
+
+    .post .name-date h4{
+        color: hsl(0, 0%, 8%);
+    }
+
+    .post .user-profile .date-time{
+        margin-top: -0.3rem;
+        font-size: 0.75rem;
+        color: rgba(179, 179, 179, 0.945);
+        font-weight: lighter;
+    }
+
+
+    #postCarousel img{
+        width: 100%;
+        height: 200px;
+        margin-bottom: 2rem;
+        object-fit: cover;
+    }
+
+
+    .post .content{
+        margin: 0.7rem 0 1.3rem;
+        line-height: 1.2rem;
+        text-align: justify;
+        font-size: 1rem;
+        border-top: 1px solid rgb(221, 221, 221);
+        padding-top: 0.7rem;
+        font-family: 'Calibri';
+    }
+
+    .post .content a{
+        color: hsl(0, 0%, 8%);
+    }
+
+    .post-bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Calibri';
+        font-size: 1rem;
+    }
+
+    .post-bottom p{
+        margin-top: 1rem;
+    }
+
+    .post-bottom p a{
+        color: black;
+    }
+
+    .post-bottom a{
+        color: rgb(57, 57, 243);
+        font-family: 'Calibri';
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .no-post {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        color: rgba(153, 153, 153, 0.945);
+    }
+}

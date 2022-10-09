@@ -23,29 +23,12 @@ a:hover, a:active, a:visited, a:focus {
 
 @media(min-width: 320px) and (max-width: 480px){
     .edit-modal{
-        /* position: absolute;
-        left: 50%;
-        top: 50%; */
         text-align: center;
         background-color: hsl(0, 0%, 98%);
-        /* padding: 1rem 1.5rem; */
-        /* transform: translate(-50%, -50%); */
         width: 90%;
-        /* border-radius: 0.5rem; */
         min-height: 100vh;
-        margin: 1rem auto 0;
-    }
-
-    .edit-modal textarea{
-        margin-bottom: 1rem;
-        border: 1px rgb(139, 139, 139) solid;
-        font-size: 1rem;
+        margin: 2.5rem auto 0;
         font-family: 'Calibri';
-        line-height: 1rem;
-        text-align: justify;
-        width: 100%;
-        background-color: hsl(0, 0%, 98%);
-        border-radius: 0.3rem;
     }
 
     .edit-modal .image-upload{
@@ -77,6 +60,26 @@ a:hover, a:active, a:visited, a:focus {
         color: hsl(0, 0%, 98%)
     }
 
+    .edit-modal input{
+        width: 100%;
+        padding: 0.45rem 0.9rem;
+        border: 1px solid rgb(172, 172, 172);
+        outline: none;
+        border-radius: 10rem;
+        margin-bottom: 1.3rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .form-label{
+        font-weight: 400;
+        float: left;
+        font-size: 1.1rem;
+    }
+
+    .form-control{
+        margin: 0 auto;
+    }
+
     .update{
         background-color: rgb(0, 170, 0);
     }
@@ -90,12 +93,11 @@ a:hover, a:active, a:visited, a:focus {
         height: 4rem;
     }
 
-    h4{
-        font-size: 0.9rem;
+    h1{
+        font-size: 1.3rem;
         font-weight: bold;
-        /* margin-left: 0.6rem; */
-        text-align: left;
-        font-family: 'Calibri';
+        text-align: center;
+        margin-bottom: 1.2rem;
     }
 
     .images{
@@ -130,6 +132,10 @@ a:hover, a:active, a:visited, a:focus {
 
     .image-upload label svg{
         margin-top: 0.2rem;
+    }
+
+    .image-upload span{
+        font-size: 1rem;
     }
 
 

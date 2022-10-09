@@ -15,6 +15,10 @@ body{
     padding: 0px;
 }
 
+a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
+}
+
 @media(min-width: 320px) and (max-width: 480px){
     #navbar{
         /* border: 1px solid red; */

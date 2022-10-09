@@ -16,6 +16,10 @@ a{
     color: rgb(22, 22, 22);
 }
 
+a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
+}
+
 @media(min-width: 320px) and (max-width: 480px){
     #navbar{
         display: flex;
@@ -85,7 +89,7 @@ a{
     .edit-delete{
         position: absolute;
         background-color: white;
-        top: 0;
+        top: 0.5rem;
         right: 1.5rem;
         text-align: center;
         padding: 0.9rem 0.5rem;
@@ -93,13 +97,17 @@ a{
         font-size: 0.9rem;
         font-family: 'Calibri';
         box-shadow: 1px -2px 6px rgb(221, 221, 221);
+        width: 6rem;
+    }
+
+    .edit-delete hr{
+        color: rgb(221, 221, 221);
     }
 
     .edit-delete a{
         color: black;
         font-weight: bold;
     }
-
 
     .edit-delete-hidden{
         display: none;
@@ -109,13 +117,12 @@ a{
         border: none;
         outline: 0;
         background-color: white;
-        margin-top: 0.7rem;
         color: red;
         font-weight: bold;
+        margin-top: -0.3rem;
     }
 
     .post-top{
-        /* border: 1px red solid; */
         display: flex;
         justify-content: space-between;
         margin: 1.5rem 0;
@@ -131,15 +138,30 @@ a{
 
     .post-top .user-profile img{
         border-radius: 50%;
-        height: 25px;
-        width: 25px;
-        margin-top: 0.4rem;
+        height: 30px;
+        width: 30px;
+        margin-top: 1rem;
     }
 
     .post-top .user-profile h4{
         font-size: 0.8rem;
         font-weight: bold;
-        margin-left: 0.6rem;
+        margin-bottom: 0.65rem;
+    }
+
+    .post h4 a{
+        color: black;
+    }
+
+    .post .name-date{
+        margin-left: 0.4rem;
+    }
+
+    .post .user-profile .date-time{
+        margin-top: -0.3rem;
+        font-size: 0.6rem;
+        color: rgb(139, 139, 139);
+        font-weight: lighter;
     }
 
     .post img{
@@ -150,13 +172,12 @@ a{
 
     #postCarousel img{
         width: 100%;
-        height: 250px;
-        margin-bottom: 1rem;
-        /* object-fit: cover; */
+        height: 200px;
+        margin-bottom: 2rem;
+        object-fit: cover;
     }
 
     .post p{
-        /* margin: 0.5rem 0 1.3rem; */
         line-height: 1.2rem;
         text-align: justify;
         font-size: 1rem;
@@ -166,10 +187,8 @@ a{
     }
 
     .three-dots{
-        /* border: 1px red solid; */
         width: 6%;
         height: 0.8rem;
-        /* margin-right: 0.5rem; */
     }
 
     .comment{

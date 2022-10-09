@@ -8,7 +8,17 @@
                 <div class="post-top">
                     <div class="user-profile">
                         <img src="<%=post.user.profile.url%>" alt="">
-                        <h4><a href="#"><%=post.user.firstname%> <%=post.user.lastname%></a></h4>
+                        <div class="name-date">
+                            <% if( currentUser && post.user.equals(currentUser._id)) { %>
+                                <h4><a href="/profile"><%=post.user.firstname%> <%=post.user.lastname%></a></h4>
+                                <% } else { %> 
+                                <h4><a href="/profile/<%=post.user._id%> "><%=post.user.firstname%> <%=post.user.lastname%></a></h4>
+                                <% } %>
+                            <div class="date-time">
+                                <span class="date">Posted on <%=post.postedAt.toString().substring(4, 15)%> at</span>
+                                <span class="time"><%=post.postedAt.toString().substring(16, 21)%></span>    
+                            </div>
+                        </div>
                     </div>
                         <% if( currentUser && post.user.equals(currentUser._id)) { %>
                             <svg class="three-dots" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -25,6 +35,7 @@
                     <div class="edit-delete edit-delete-hidden">
                         <% if( currentUser && post.user.equals(currentUser._id)) { %>
                             <a href="/posts/<%=post._id%>/edit">Edit</a>
+                            <hr>
                             <form action="/posts/<%=post._id%>?_method=DELETE" method="POST">
                                 <button>Delete</button>
                             </form>
@@ -68,7 +79,6 @@
         <% } else { %> 
             <h4 class="comment-header" style="font-weight: 400;"><%=post.comments.length%> comment</h4>
         <% } %> 
-            <!-- <h4 class="comment-header"><u>Comments</u></h4> -->
                 <%for (let comment of post.comments.reverse()) { %>
                     <div id="each-comment">
                         <h4>Anonymous</h4>
@@ -132,35 +142,11 @@
 <script>
     const threeDots = document.querySelector('.three-dots');
     const editDeleteModal = document.querySelector('.edit-delete');
-    const replyButtons = document.querySelectorAll('.reply');
-    const replyModals = document.querySelectorAll('.reply-input');
-    const showBody = document.querySelector('#show-body');
 
     const showEditDeleteModal = () => {
         editDeleteModal.classList.toggle('edit-delete-hidden');
     }
 
     threeDots.addEventListener('click', showEditDeleteModal);
-
-
-    // for( let i = 0; i <= replyButtons.length; i++){
-    //     for( let j = 0; j <= replyModals.length; j++){
-    //         if(i === j){
-    //             replyButtons[i].addEventListener('click', (e) => {
-    //                 replyModals[j].classList.toggle('reply-input-hidden');
-    //             });
-    //         };
-    //     }
-    // }
-
-    // showBody.addEventListener('click', (e) => {
-    //     let x = e.target;
-    //     // console.log(x);
-    //     if(x.classList.contains('reply')){
-    //         let y = x.parentElement.parentElement.parentElement.children[3];
-    //         // console.log(x);
-    //         y.classList.toggle('reply-input-hidden');
-    //     }
-    // })
 
 </script>

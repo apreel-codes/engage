@@ -20,6 +20,10 @@ a{
     color: rgb(22, 22, 22);
 }
 
+a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
+}
+
 @media(min-width: 320px) and (max-width: 480px){
     #navbar{
         display: flex;
@@ -58,8 +62,8 @@ a{
 
     .text-area img{
         border-radius: 50%;
-        height: 25px;
-        width: 25px;
+        height: 30px;
+        width: 30px;
     }
 
     label{
@@ -86,7 +90,7 @@ a{
     }
 
     .text-area input{
-        width: 70%;
+        width: 75%;
         padding: 0.7rem 0.9rem;
         border: 1px solid rgb(172, 172, 172);
         outline: none;
@@ -121,27 +125,41 @@ a{
 
     .post .user-profile{
         display: flex;
-        align-items: flex-start;
-        height: 1.7rem;
     }
 
     .post .user-profile img{
         border-radius: 50%;
-        height: 25px;
-        width: 25px;
+        height: 30px;
+        width: 30px;
     }
 
     .post h4{
         font-size: 0.8rem;
         font-weight: bold;
-        margin: 0.3rem 0 0 0.5rem;
+        margin-bottom: 0.65rem;
     }
+
+    .post h4 a{
+        color: black;
+    }
+
+    .post .name-date{
+        margin-left: 0.4rem;
+    }
+
+    .post .user-profile .date-time{
+        margin-top: -0.3rem;
+        font-size: 0.6rem;
+        color: rgba(179, 179, 179, 0.945);
+        font-weight: lighter;
+    }
+
 
     #postCarousel img{
         width: 100%;
-        height: auto;
+        height: 200px;
         margin-bottom: 2rem;
-        object-fit: fill;
+        object-fit: cover;
     }
 
 
@@ -153,6 +171,10 @@ a{
         border-top: 1px solid rgb(221, 221, 221);
         padding-top: 0.7rem;
         font-family: 'Calibri';
+    }
+
+    .post .content a{
+       color: black;
     }
 
     .post-bottom{
