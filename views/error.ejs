@@ -10,6 +10,7 @@
 <body>
     <div class="notfound-error">
             <h1><%=err.statusCode%></h1>
+            <h2>An error occured :(</h2>
             <% if(process.env.NODE_ENV !== "production") { %> 
             <!-- hide the error stack message from the user -->
             <p><%=err.stack%></p>

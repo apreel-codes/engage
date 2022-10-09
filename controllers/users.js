@@ -21,7 +21,11 @@ module.exports.createNewUser =  async(req, res, next) => {
           res.redirect('/posts');
     })
     } catch (e) {
-        req.flash('error', e.message);
+        if(e.message === "Cannot read properties of undefined (reading 'path')"){
+            req.flash('error', 'Kindly attach a profile picture');
+        } else {
+            req.flash('error', 'Existing username/email address');
+        }
         res.redirect('/register');
     }
 }

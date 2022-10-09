@@ -147,7 +147,7 @@ a:hover, a:active, a:visited, a:focus {
     #navbar{
         display: flex;
         justify-content: space-between;
-        background-color: rgb(57, 57, 243);
+        background-color: #4267B2;
         padding: 0.8rem 0.8rem;
         align-items: center;
     }

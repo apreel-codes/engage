@@ -1,8 +1,6 @@
 body{
     background-color: hsl(0, 0%, 98%);
     margin: 0px;
-    /* display: flex;
-    justify-content: center; */
     align-items: center;
     min-height: 100vh;
     line-height: 1;
@@ -28,7 +26,7 @@ a:hover, a:active, a:visited, a:focus {
     #navbar{
         display: flex;
         justify-content: space-between;
-        background-color: rgb(57, 57, 243);
+        background-color: #4267B2;
         padding: 0.8rem 0.8rem;
         align-items: center;
     }
@@ -64,6 +62,7 @@ a:hover, a:active, a:visited, a:focus {
         border-radius: 50%;
         height: 30px;
         width: 30px;
+        object-fit: cover;
     }
 
     label{
@@ -110,7 +109,7 @@ a:hover, a:active, a:visited, a:focus {
         font-size: 1rem;
         border-radius: 10rem;
         border: none;
-        background-color: rgb(57, 57, 243);
+        background-color: #4267B2;
         color: aliceblue;
         margin-top: 1.2rem;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -131,6 +130,7 @@ a:hover, a:active, a:visited, a:focus {
         border-radius: 50%;
         height: 30px;
         width: 30px;
+        object-fit: cover;
     }
 
     .post h4{
@@ -225,10 +225,10 @@ a:hover, a:active, a:visited, a:focus {
 
     .mobile .navs a{
         padding: 0.6rem 0.8rem;
-        border: 1px blue solid;
+        border: 1px #4267B2 solid;
         border-radius: 0.2rem;
         margin-bottom: 2.1rem;
-        background-color: rgb(57, 57, 243);
+        background-color: #4267B2;
         color: white;
         font-size: 1rem;
         font-family: 'Calibri';

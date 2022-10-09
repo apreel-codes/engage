@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(57, 57, 243);
+    background-color: #4267B2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,10 +12,6 @@ body{
     font-family: 'Calibri';
     max-width: 100%;
     color: rgba(255, 255, 255, 0.89);
-}
-
-a:hover, a:active, a:visited, a:focus {
-    text-decoration:none;
 }
 
 
@@ -38,11 +34,7 @@ a:hover, a:active, a:visited, a:focus {
         margin-bottom: 4rem;
     }
 
-    /* .notfound-error{
-        border: 1px red solid;
-    } */
-
-    .notfound-error a{
+    a{
         text-decoration: none;
         border: 1px rgba(255, 255, 255, 0.89) solid;
         padding: 0.5rem 1.9rem;

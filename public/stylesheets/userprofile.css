@@ -19,7 +19,7 @@ a:hover, a:active, a:visited, a:focus {
     #navbar{
         display: flex;
         justify-content: space-between;
-        background-color: rgb(57, 57, 243);
+        background-color: #4267B2;
         padding: 0.8rem 0.8rem;
         align-items: center;
     }
@@ -64,7 +64,7 @@ a:hover, a:active, a:visited, a:focus {
     }
 
     .edit-change-photo a{
-        background-color: rgb(57, 57, 243);
+        background-color: #4267B2;
         color: white;
         text-decoration: none;
         padding: 0.8rem 3.2rem;
@@ -88,7 +88,7 @@ a:hover, a:active, a:visited, a:focus {
     }
 
     .image-upload{
-        background-color: rgb(57, 57, 243);
+        background-color: #4267B2;
         display: flex;
         justify-content: space-between;
         width: 173px;
@@ -186,7 +186,7 @@ a:hover, a:active, a:visited, a:focus {
     }
 
     .post-bottom a{
-        color: rgb(57, 57, 243);
+        color: #4267B2;
         font-family: 'Calibri';
         font-weight: bold;
         font-size: 0.9rem;
