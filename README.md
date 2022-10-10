@@ -15,7 +15,7 @@ This link directs you to the app: https://apreel-engage-app.herokuapp.com/posts
 
 Tools:
 
-Backend - NodeJs and its framework Express
-Database - MongoDB
-Image storage - Cloudinary
-Frontend - EJS, CSS, Bootstrap, Vanilla JavaScript
+| Backend - NodeJs and its framework Express
+| Database - MongoDB
+| Image storage - Cloudinary
+| Frontend - EJS, CSS, Bootstrap, Vanilla JavaScript
